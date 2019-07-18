@@ -1,0 +1,59 @@
+.done-letter { 
+  color: #ffc107 !important;
+}
+
+.frw-keyboard{
+  position: absolute;
+  bottom: 20px;
+  color: #282c34;
+}
+
+.frw-keyboard .react-simple-keyboard{
+  /* border: solid 5px rgba(255, 193, 7, 0.3) !important; */
+  background-color: rgba(255, 193, 7, .1)
+}
+
+.frw-keyboard .hg-button{
+  background: rgba(255, 193, 7, .5) !important;
+  border-bottom: none !important;
+}
+
+.frw-keyboard .hg-button:active{
+  background: rgba(255, 193, 7, .7) !important;
+  color: white;
+}
+
+.frw-progress{
+  min-width: 300px
+}
+
+.frw-progress .progress-bar{
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: linear;
+}
+
+.frw-progress-run{
+  animation: progressbar-countdown;
+}
+
+@keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.frw-stats{
+  position: absolute;
+  top: 80px;
+}
+
+.frw-logo{
+  font-size: calc(10px + 15vmin) !important;
+  color: #ffc107;
+}

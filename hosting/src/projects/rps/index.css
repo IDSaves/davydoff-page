@@ -1,0 +1,97 @@
+.rps-form p{
+  font-size: 18px;
+}
+
+.rps-rock{
+  color: #ed5383 !important;
+}
+
+.rps-paper{
+  color: #ffdf54 !important;
+}
+
+.rps-scissors{
+  color: #71d9e2 !important;
+}
+
+.rps-score{
+  font-size: 40px;
+}
+
+.your-move i{
+  font-size: 50px;
+  padding: 15px;
+  padding-bottom: 0;
+  transition: .3s;
+  color: #828282;
+}
+
+.your-move i.fa-hand-rock:hover{
+  color: #ed5383;
+  cursor: pointer;
+}
+.your-move i.fa-hand-paper:hover{
+  color: #ffdf54;
+  cursor: pointer;
+}
+.your-move i.fa-hand-scissors:hover{
+  color: #71d9e2;
+  cursor: pointer;
+}
+
+.fa-question{
+  color: #828282;
+}
+
+.rps-make-move{
+  color: #828282;
+}
+
+.rps-current-move{
+  /* font-size: 150px !important; */
+  font-size: calc(10px + 20vmin) !important;
+}
+
+.rps-small-text{
+  font-size: 25px;
+}
+
+.rps-logo{
+  /* background-color: rgba(29, 33, 38, 0.5); */
+  border-radius: 5px;
+  padding: 20px;
+}
+.rps-logo-el{
+  font-size: calc(10px + 15vmin) !important;
+  padding: 20px;
+}
+
+.rps-logo-el.fa-hand-rock{
+  color: #ed5383;
+}
+.rps-logo-el.fa-hand-paper{
+  color: #ffdf54;
+}
+.rps-logo-el.fa-hand-scissors{
+  color: #71d9e2;
+}
+
+.rps-rock{
+  color: #ed5383;
+}
+.rps-paper{
+  color: #ffdf54;
+}
+.rps-scissors{
+  color: #71d9e2;
+}
+
+.rps-game-type-text{
+  font-size: 20px;
+}
+
+.rps-game-type{
+  border-radius: 5px;
+  background-color: rgba(29, 33, 38, 0.5);
+  padding: 20px;
+}
