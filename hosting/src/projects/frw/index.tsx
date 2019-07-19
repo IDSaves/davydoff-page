@@ -1,7 +1,10 @@
 import React, { useState, useEffect, Fragment } from "react"
 import { Link } from "react-router-dom"
 import Keyboard from "./keyboard"
-import words from "./words.json" 
+import words from "./words.json"
+import Menu from "./menu"
+import Game from "./game"
+import GameOver from "./game-over" 
 import "./index.css"
 
 const rnm = (min: number, max: number) => Math.round(min - 0.5 + Math.random() * (max - min + min))
@@ -95,34 +98,22 @@ export default () => {
     <div className="main-wrapper">
       <Link to="/" className="back-link">Home</Link>
       {gameState === "running" ? (
-        <Fragment>
-          <p className="frw-stats mb-0">
-            <span className="mr-5"><i className="fas fa-heart text-danger" /> {lives}</span> 
-            <span><i className="fas fa-certificate text-warning" /> {points}</span><br/>
-            <span className="text-muted small">Press "Escape" to stop the game.</span>
-          </p>
-          <p className="text-muted">{words[word].split("").map((word, i) => (<span key={i} className={i + 1 <= letters ? "done-letter" : ""}>{word}</span>))}</p>
-          <div className="progress frw-progress bg-dark">
-            <div className={`progress-bar progress-bar-striped progress-bar-animated bg-warning ${animation ? "frw-progress-run" : ""}`} style={{animationDuration: progressDuration}}></div>
-          </div>
-          <Keyboard mobileKeyEvent={handleKey} />
-        </Fragment>
+        <Game 
+          lives={lives}
+          points={points}
+          words={words}
+          word={word} 
+          letters={letters} 
+          animation={animation}
+          progressDuration={progressDuration}
+          handleKey={handleKey} />
       ) : gameState === "ended" ? (
-        <Fragment>
-          <p>
-            <b>The game is over!<br /></b>
-            <span className="text-muted small">You got <span className="text-white">{points}</span> points!</span>
-          </p>
-          <button className="btn btn-dark" onClick={() => startGame()}>Replay</button>
-        </Fragment>  
+        <GameOver 
+          startGame={() => startGame()} 
+          points={points} />  
       ) : (
-        <Fragment>
-          <div className="frw-logo">
-            <i className="fas fa-keyboard" />
-          </div>
-          <p><b>Fast Running Words</b></p>
-          <button className="btn btn-dark" onClick={() => startGame()}>Star the game</button>
-        </Fragment>
+        <Menu 
+          startGame={() => startGame()} />
       )}
     </div>
   )
