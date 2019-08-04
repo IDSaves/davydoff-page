@@ -49,7 +49,7 @@ export default () => {
           </p>
           <div className="container">
             <div className="row">
-              <div className="col-lg-4 offset-lg-2 col-6">
+              <div className="col-lg-4 col-6">
                 <Link to="/rps">
                   <div className="projects-link-block p-2 text-center mb-3d"> 
                     <h1><i className="fas fa-hand-scissors" /></h1>
@@ -62,6 +62,14 @@ export default () => {
                   <div className="projects-link-block p-2 text-center mb-3"> 
                     <h1><i className="fas fa-keyboard" /></h1>
                     <p className="mb-0 text-muted"><b>Fast Running Words</b></p>
+                  </div>
+                </Link>
+              </div>
+              <div className="col-lg-4 col-12">
+                <Link to="/lights">
+                  <div className="projects-link-block p-2 text-center mb-3"> 
+                    <h1><i className="fas fa-adjust" /></h1>
+                    <p className="mb-0 text-muted"><b>Lights [Beta]</b></p>
                   </div>
                 </Link>
               </div>

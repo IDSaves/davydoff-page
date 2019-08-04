@@ -1,0 +1,9 @@
+.lights-logo{
+  font-size: calc(10px + 15vmin) !important;
+  color: #f54242;
+}
+
+.lights-place {
+  cursor: pointer;
+  color: #f54242;
+}

@@ -28,7 +28,7 @@ export default ({ setForm }: {[x: string]: any}) => {
         if (index === people.length - 1) index = 0
         else index += 1
       }
-    }, 2000)
+    }, 1500)
   }
 
   return (
