@@ -1,45 +1,13 @@
 import React, { useState, Fragment } from "react"
 import { Link } from "react-router-dom"
-import db from "../firebase.config"
-import WasHere from "./was-here"
 
 export default () => {
-  const [name, setName] = useState<string>("")
-  const [result, setResult] = useState<string>("")
-  const [show, setShow] = useState<Boolean>(false)
   document.body.style.background = "#282c34"
   document.title = "Davydoff's page"
 
-  const submitName = async () => {
-    if (name === "") {
-      setResult("Error")
-    }
-    else {
-      setResult("Loading")
-      await db.collection("was_here").add({ name: name, moderated: false, when: new Date() })
-      setResult("Success")
-    }
-  }
-
   return(
       <Fragment>
-        <WasHere setForm={() => show ? setShow(false) : setShow(true)} />
         <div className="main-wrapper">
-
-          <div className="was-here-input-block">
-            {show ? result === "Success" ? (
-                <p className="success-message mt-1 mb-3">Successfully send to moderation!</p>
-              ) : result === "Loading" ? (
-                <p className="loading-message mt-1 mb-3">Sending...</p>
-              ) : (
-                <div className="show-was-here-input input-group mt-1 mb-3">
-                  <input type="text" className="form-control" placeholder="Your name" onChange={(e: any) => setName(e.target.value)} />
-                  <div className="input-group-append">
-                    <button className="btn btn-dark" type="button" onClick={() => submitName()}>Was here</button>
-                  </div>
-                </div>
-            ) : ""}
-          </div>
 
           <p className="mb-0"><code>D</code>avydoff's page</p>
           <p>
