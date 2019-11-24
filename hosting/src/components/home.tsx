@@ -11,9 +11,21 @@ export default () => {
 
           <p className="mb-0"><code>D</code>avydoff's page</p>
           <p>
-            <a href="https://github.com/IDSaves" className="contact text-muted" target="_blank"><i className="fab fa-github" /></a>
-            <a href="https://vk.com/i_davydoff" className="contact text-muted" target="_blank"><i className="fab fa-vk" /></a>
-            <a href="https://steamcommunity.com/id/Ripper3/" className="contact text-muted" target="_blank"><i className="fab fa-steam" /></a>
+            <a href="https://github.com/IDSaves" className="contact text-muted" target="_blank">
+                <i className="fab fa-github" />
+            </a>
+            <a href="https://vk.com/i_davydoff" className="contact text-muted" target="_blank">
+                <i className="fab fa-vk" />
+            </a>
+            <a href="https://steamcommunity.com/id/Ripper3/" className="contact text-muted" target="_blank">
+                <i className="fab fa-steam" />
+            </a>
+            <span className="contact text-muted" data-placement="bottom" data-toggle="popover" title="Telegram" data-content="@i_davydoff">
+                <i className="fab fa-telegram" />
+            </span>
+            <span className="contact text-muted" data-placement="bottom" data-toggle="popover" title="Discord" data-content="Davydoff#9761">
+                <i className="fab fa-discord" />
+            </span>
           </p>
           <div className="container">
             <div className="row">

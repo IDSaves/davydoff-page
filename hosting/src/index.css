@@ -126,5 +126,29 @@ a:hover{
 .was-here-input-block{
   position: absolute;
   top: 50px;
+}
 
+.popover-header{
+    background-color: #23272d;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom: none;
+    color: #f44265;
+}
+
+.bs-popover-auto[x-placement^=bottom] .popover-header::before, .bs-popover-bottom .popover-header::before {
+    border-bottom: none;
+}
+
+.bs-popover-auto[x-placement^=bottom] .arrow::after, .bs-popover-bottom .arrow::after {
+    border-bottom-color: none !important;
+    border-bottom: none;
+}
+
+.popover{
+    background-color: #393f49;
+}
+
+.popover-body{
+    color: #b6b6b6;
 }
